@@ -8,6 +8,11 @@ on:
     branches:
       - "19.0"
       - "19.0-ocabot-*"
+      # ledoent fork: validate review/aggregated branches on push so we get
+      # CI feedback without opening an upstream PR. Mirrors the pattern in
+      # openupgrade-lab's test-migration.yml.
+      - "19.0-aggregated"
+      - "19.0-pr*"
 
 jobs:
   unreleased-deps:
